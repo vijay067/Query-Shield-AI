@@ -1,0 +1,15 @@
+data = {
+    'attack type': ['SQL Injection', 'SQL Injection', 'SQL Injection', 'SQL Injection', 'SQL Injection',
+                    'SQL Injection', 'SQL Injection', 'SQL Injection', 'SQL Injection', 'SQL Injection',
+                    'SQL Injection'],
+    'injection payload': ['1 OR 1=1--', "admin'; DROP TABLE users;--", 'UNION SELECT username, password FROM users;--',
+                          '1; UPDATE users SET password=12345 WHERE ...', 'SELECT * FROM information_schema.tables;--',
+                          '1; DROP TABLE users;--', '1; SELECT * FROM users;--', '1 AND 1=2;--', '1 OR 1=1--',
+                          "admin'; DROP TABLE users;--", 'another attack payload'],
+    'attack outcome': ['Success', 'Failure', 'Failure', 'Failure', 'Success', 'Failure', 'Success', 'Success',
+                       'Success', 'Failure', 'Success'],
+    'attacker IP address': ['192.168.1.100', '10.0.0.2', '203.0.113.7', '198.51.100.3', '192.0.2.1', '198.51.100.5',
+                            '203.0.113.9', '10.0.0.7', '192.168.1.105', '172.16.0.10', '192.168.1.102'],
+    'affected rows anomaly': [True, False, True, True, True, False, True, True, True, True, False],
+    'error_based_SQL_injection': [False, True, False, False, False, True, False, False, False, False, True]
+}
